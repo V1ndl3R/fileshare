@@ -1,0 +1,8 @@
+openssl genrsa -out NAME.pem 2048  --Creates private key
+openssl req -new -key NAME.pem -out NAME.csr  --creates a request for a cert
+[CommonName should match NAME and be unique]
+openssl ca -in NAME.csr -out NAME.crt  --Take the req and creates a cert
+
+
+
+
